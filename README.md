@@ -1,2 +1,2 @@
-# jdbc
-Java Database
+# servlet & jdbc
+Java Servlet & Database
