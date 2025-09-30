@@ -21,6 +21,11 @@ public class JDBCTemplate {
       con = DriverManager.getConnection(
           url, props
       );
+
+      /* 자동 커밋 설정을 수동 커밋 설정으로 변경하여 서비스에서 트랜잭션을
+      * 컨트롤 할 수 있도록 한다 */
+      con.setAutoCommit(false);
+
     } catch (IOException e) {
       e.printStackTrace();
     } catch (SQLException e) {
@@ -50,6 +55,23 @@ public class JDBCTemplate {
   public static void close(Statement statement) {
     try {
       if (statement != null && !statement.isClosed()) statement.close();
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+  }
+
+  /* 트랜잭션 컨트롤을 위한 메소드 추가 */
+  public static void commit(Connection con) {
+    try {
+      if (con != null && !con.isClosed()) con.commit();
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+  }
+
+  public static void rollback(Connection con) {
+    try {
+      if (con != null && !con.isClosed()) con.commit();
     } catch (SQLException e) {
       e.printStackTrace();
     }
