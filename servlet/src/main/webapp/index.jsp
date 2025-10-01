@@ -89,5 +89,12 @@
 <h1>Request Header 값 확인</h1>
 <a href="headers">클릭</a>
 
+<h1>응답 확인 테스트</h1>
+<ul>
+    <li><a href="response">응답 확인하기</a></li>
+    <li><a href="headers-res">응답 헤더 변경 테스트</a></li>
+    <li><a href="show404Error">404 Error</a></li>
+    <li><a href="show500Error">500 Error</a></li>
+</ul>
 </body>
 </html>
