@@ -16,12 +16,12 @@
   </servlet-mapping>
   <!-- 프로젝트 내부에 404 or 500 에러가 발생
   /showErrorPage 를 요청하도록 설정 -->
-  <error-page>
-    <error-code>404</error-code>
-    <location>/showErrorPage</location>
-  </error-page>
-  <error-page>
-    <error-code>500</error-code>
-    <location>/showErrorPage</location>
-  </error-page>
+<!--  <error-page>-->
+<!--    <error-code>404</error-code>-->
+<!--    <location>/showErrorPage</location>-->
+<!--  </error-page>-->
+<!--  <error-page>-->
+<!--    <error-code>500</error-code>-->
+<!--    <location>/showErrorPage</location>-->
+<!--  </error-page>-->
 </web-app>
